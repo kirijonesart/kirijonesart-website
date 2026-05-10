@@ -13,5 +13,3 @@ I believe creativity is something we all share. It plays an important role in ou
 Whether you’re completely new or returning after time away, these classes provide a supportive and relaxed environment to explore drawing and painting at your own pace. Reawakening a creative interest from the past can be a meaningful way to reconnect with who you are today.
 
 You’re warmly invited to join me in my studio in Dorking and take some time for yourself through art.
-
-![Studio Tools]({{ site.baseurl }}/assets/images/placeholder-tools.jpg)
