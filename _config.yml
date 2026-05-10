@@ -1,14 +1,13 @@
 title: "Kiri Jones ART"
 description: "Community art classes and creative exploration"
 url: "" # set to your GitHub Pages URL later
-baseurl: "" # e.g. /repo-name if publishing from project site
+baseurl: "/kirijonesart-website" # e.g. /repo-name if publishing from project site
 
 # Build settings
 theme: minima
 plugins:
   - jekyll-feed
   - jekyll-seo-tag
-
 # Navigation (used in layout)
 nav:
   - title: "About"

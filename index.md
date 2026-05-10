@@ -14,4 +14,4 @@ Whether you’re completely new or returning after time away, these classes prov
 
 You’re warmly invited to join me in my studio in Dorking and take some time for yourself through art.
 
-![Studio Tools](/assets/images/placeholder-tools.jpg)
+![Studio Tools]({{ site.baseurl }}/assets/images/placeholder-tools.jpg)
