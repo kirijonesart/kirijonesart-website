@@ -4,13 +4,20 @@ title: Gallery
 permalink: /gallery/
 ---
 
-A rotating selection of student and instructor artworks.
-
 <div class="gallery-grid">
   {% for image in site.data.gallery %}
-    <figure>
-      <img src="{{ '/assets/images/' | append: image.file | relative_url }}" alt="{{ image.alt }}" loading="lazy" />
+    <figure class="gallery-item" data-index="{{ forloop.index0 }}">
+      <img
+        src="{{ '/assets/images/gallery/' | append: image.thumb | relative_url }}"
+        data-full="{{ '/assets/images/gallery/' | append: image.file | relative_url }}"
+        alt="{{ image.alt | default: 'Artwork' }}"
+        loading="lazy"
+      />
       {% if image.caption %}<figcaption>{{ image.caption }}</figcaption>{% endif %}
     </figure>
   {% endfor %}
 </div>
+
+{% include lightbox.html autoopen=true %}
+
+{% include lightbox.html %}
