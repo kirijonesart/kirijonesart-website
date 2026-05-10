@@ -9,9 +9,26 @@ a:hover { text-decoration:underline; }
 .site-title { margin:0; font-size:2rem; letter-spacing:.5px; }
 .tagline { margin:.35rem 0 0; font-size:.9rem; opacity:.85; max-width:40ch; }
 .site-header .wrapper.header-inner { position:relative; z-index:2; display:flex; align-items:flex-start; justify-content:space-between; gap:3rem; padding:2.75rem 0 2.25rem; flex-wrap:wrap; }
+.nav-toggle { display:none; background:none; border:none; cursor:pointer; padding:.5rem; z-index:3; position:relative; }
+.nav-toggle-icon, .nav-toggle-icon::before, .nav-toggle-icon::after { display:block; width:24px; height:2px; background:#fff; border-radius:2px; transition:transform .3s ease, opacity .3s ease; }
+.nav-toggle-icon::before, .nav-toggle-icon::after { content:''; position:absolute; }
+.nav-toggle-icon::before { top:-7px; }
+.nav-toggle-icon::after { top:7px; }
+.nav-toggle[aria-expanded='true'] .nav-toggle-icon { background:transparent; }
+.nav-toggle[aria-expanded='true'] .nav-toggle-icon::before { top:0; transform:rotate(45deg); }
+.nav-toggle[aria-expanded='true'] .nav-toggle-icon::after { top:0; transform:rotate(-45deg); }
 .site-nav ul { list-style:none; margin:0; padding:0; display:flex; gap:1.25rem; }
 .site-nav a { padding:.4rem .65rem; border-radius:4px; background:rgba(0,0,0,.35); color:#fff; backdrop-filter:blur(3px); -webkit-backdrop-filter:blur(3px); }
 .site-nav a.active, .site-nav a:hover { background:#44aa33; color:#fff; text-decoration:none; }
+@media(max-width:640px) {
+  .nav-toggle { display:flex; align-items:center; justify-content:center; }
+  .site-header .wrapper.header-inner { flex-wrap:wrap; }
+  .branding { flex:1; }
+  .site-nav { display:none; width:100%; order:3; }
+  .site-nav.is-open { display:block; }
+  .site-nav ul { flex-direction:column; gap:.5rem; padding:.75rem 0 .25rem; }
+  .site-nav a { display:block; text-align:center; padding:.6rem .75rem; }
+}
 main { padding-bottom:3rem; }
 .site-footer { border-top:1px solid #ddd; font-size:.875rem; padding:1.5rem 0; color:#555; }
 .site-footer .social-links { list-style:none; margin:.5rem 0 0; padding:0; display:flex; gap:.75rem; justify-content: center; }

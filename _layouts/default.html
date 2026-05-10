@@ -15,7 +15,10 @@
         <h1 class="site-title"><a href="{{ '/' | relative_url }}">{{ site.title }}</a></h1>
         {%- if site.description %}<p class="tagline">{{ site.description }}</p>{% endif %}
       </div>
-      <nav class="site-nav" aria-label="Primary">
+      <button class="nav-toggle" aria-label="Toggle navigation" aria-expanded="false" aria-controls="primary-nav">
+        <span class="nav-toggle-icon"></span>
+      </button>
+      <nav class="site-nav" id="primary-nav" aria-label="Primary">
         <ul>
           {%- for item in site.nav -%}
             <li><a href="{{ item.url | relative_url }}" class="{%- if page.url == item.url -%}active{%- endif -%}">{{ item.title }}</a></li>
@@ -24,6 +27,16 @@
       </nav>
     </div>
   </header>
+  <script>
+  (function(){
+    var btn = document.querySelector('.nav-toggle');
+    var nav = document.getElementById('primary-nav');
+    btn.addEventListener('click', function(){
+      var open = nav.classList.toggle('is-open');
+      btn.setAttribute('aria-expanded', open);
+    });
+  })();
+  </script>
   <main class="site-content wrapper">
     {{ content }}
   </main>
