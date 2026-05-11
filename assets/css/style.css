@@ -1,12 +1,12 @@
-body { font-family: system-ui,-apple-system,BlinkMacSystemFont,"Segoe UI",Roboto,Helvetica,Arial,sans-serif; margin:0; color:#222; line-height:1.5; }
+body { font-family: system-ui,-apple-system,BlinkMacSystemFont,"Segoe UI",Roboto,Helvetica,Arial,sans-serif; font-weight: 400; margin:0; color:#222; line-height:1.5; }
 .wrapper { width: min(1100px, 92%); margin: 0 auto; }
-h1 a { color:#44ff33; text-decoration:none; }
+h1 a { color:#44ee33; text-decoration:none; font-size: 2rem; font-weight: 400; }
 a { color:#44aa33; text-decoration:none; }
-a:hover { text-decoration:underline; }
+a:hover { color:#44ff33; text-decoration:none; }
 .site-header { position:relative; background:#111; color:#fff; border-bottom:1px solid #222; margin-bottom:2rem; overflow:hidden; }
 .site-header .hero-bg { position:absolute; inset:0; background:url('../images/kiri_bg.jpg') center/cover no-repeat; filter:brightness(1) saturate(1); transform:scale(1.02); }
 .site-header:after { content:""; position:absolute; inset:0; background:linear-gradient(180deg, rgba(0,0,0,.55), rgba(0,0,0,.25) 40%, rgba(0,0,0,.75)); pointer-events:none; }
-.site-title { margin:0; font-size:2rem; letter-spacing:.5px; }
+.site-title { margin:0; font-size:2.2rem; letter-spacing:.5px; font-weight: 350; }
 .tagline { margin:.35rem 0 0; font-size:.9rem; opacity:.85; max-width:40ch; }
 .site-header .wrapper.header-inner { position:relative; z-index:2; display:flex; align-items:flex-start; justify-content:space-between; gap:3rem; padding:2.75rem 0 2.25rem; flex-wrap:wrap; }
 .nav-toggle { display:none; background:none; border:none; cursor:pointer; padding:.5rem; z-index:3; position:relative; }
@@ -19,7 +19,7 @@ a:hover { text-decoration:underline; }
 .nav-toggle[aria-expanded='true'] .nav-toggle-icon::after { top:0; transform:rotate(-45deg); }
 .site-nav ul { list-style:none; margin:0; padding:0; display:flex; gap:1.25rem; }
 .site-nav a { padding:.4rem .65rem; border-radius:4px; background:rgba(0,0,0,.35); color:#fff; backdrop-filter:blur(3px); -webkit-backdrop-filter:blur(3px); }
-.site-nav a.active, .site-nav a:hover { background:#44aa33; color:#fff; text-decoration:none; }
+.site-nav a.active, .site-nav a:hover { color:#afc; text-decoration:none; }
 @media(max-width:640px) {
   .nav-toggle { display:flex; align-items:center; justify-content:center; }
   .site-header .wrapper.header-inner { flex-wrap:wrap; }
@@ -30,20 +30,24 @@ a:hover { text-decoration:underline; }
   .site-nav a { display:block; text-align:center; padding:.6rem .75rem; }
 }
 main { padding-bottom:3rem; }
-.site-footer { border-top:1px solid #ddd; font-size:.875rem; padding:1.5rem 0; color:#555; }
-.site-footer .social-links { list-style:none; margin:.5rem 0 0; padding:0; display:flex; gap:.75rem; justify-content: center; }
-.site-footer .social-links li { display: list-item; }
-.site-footer .social-links a { color:inherit; width:34px; height:34px; border:1px solid #ccc; border-radius:6px; background:rgba(0,0,0,.03); display:inline-flex; align-items:center; justify-content:center; transition:.2s background,.2s color,.2s border-color; }
-.site-footer .social-links a svg { width:18px; height:18px; }
-.site-footer .social-links a:hover { background:#44aa33; color:#fff; text-decoration:none; border-color:#44aa33; }
+.social-links { list-style:none; margin:4.5rem 0 0; padding:0; display:flex; gap:.75rem; justify-content: center; }
+.social-links li { display: list-item; }
+.social-links a { color:inherit; width:34px; height:34px; border:1px solid #ccc; border-radius:6px; background:rgba(0,0,0,.03); display:inline-flex; align-items:center; justify-content:center; transition:.2s background,.2s color,.2s border-color; }
+.social-links a svg { width:18px; height:18px; }
+.social-links a:hover { background:#44aa33; color:#fff; text-decoration:none; border-color:#44aa33; }
 .sr-only { position:absolute !important; width:1px !important; height:1px !important; padding:0 !important; margin:-1px !important; overflow:hidden !important; clip:rect(0 0 0 0) !important; white-space:nowrap !important; border:0 !important; }
 /* Brand-specific styling */
-/*.site-footer .social-links a.facebook { color:#1877F2; border-color:#1877F2; }*/
-.site-footer .social-links a.facebook { background:#1877F2; color:#fff; }
-/*.site-footer .social-links a.instagram { color:#E4405F; border-color:#E4405F; }*/
-.site-footer .social-links a.instagram { background:linear-gradient(45deg,#F58529,#F77737,#FCAF45,#FFDC80,#E4405F,#C13584,#833AB4,#5851DB,#405DE6); color:#fff; border-color:#E4405F; }
+/* .social-links a.facebook { color:#1877F2; border-color:#1877F2; }*/
+.social-links a.facebook { background:#1877F2; color:#fff; }
+/* .social-links a.instagram { color:#E4405F; border-color:#E4405F; }*/
+.social-links a.instagram { background:linear-gradient(45deg,#F58529,#F77737,#FCAF45,#FFDC80,#E4405F,#C13584,#833AB4,#5851DB,#405DE6); color:#fff; border-color:#E4405F; }
+.site-footer { border-top:0px solid #ddd; font-size:.875rem; padding:1.5rem 0; color:#555; }
+.site-footer p { font-size: 0.8rem;}
 .headshot { display:block; width:200px; height:200px; border-radius:50%; object-fit:cover; margin:0 auto 1.5rem; box-shadow:0 2px 8px rgba(0,0,0,.15); }
-.page h1, .class h1 { margin-top:0; }
+.page h1, .class h1 { font-size: 1.7rem; margin-top:0; font-weight: 400; }
+h2 {font-size: 1.5rem; font-weight: 400; }
+h3 {font-size: 1.3rem; font-weight: 400; }
+p, li {font-size: 0.9rem; }
 .class .meta { font-size:.85rem; color:#555; display:flex; flex-wrap:wrap; gap:.75rem; }
 .badge.level { background:#eee; padding:2px 6px; border-radius:3px; font-size:.7rem; text-transform:uppercase; letter-spacing:.5px; }
 .class-list { list-style:none; padding:0; }
@@ -79,9 +83,9 @@ main { padding-bottom:3rem; }
 .contact-form button:hover { background:#2f7a24; }
 @media (prefers-color-scheme: dark) {
   body { background:#0d0d0d; color:#ddd; }
-  .site-footer { background:#181818; border-color:#333; }
-  .site-footer .social-links a { border-color:#444; background:rgba(255,255,255,.05); }
-  .site-footer .social-links a:hover { color:#111; }
+  .site-footer { background:#181818; border-color:#333;}
+  .social-links a { border-color:#444; background:rgba(255,255,255,.05); }
+  .social-links a:hover { color:#111; }
   a { color:#44aa33; }
   .site-nav a { background:rgba(255,255,255,.08); }
   .site-nav a.active, .site-nav a:hover { background:#44aa33; color:#111; }

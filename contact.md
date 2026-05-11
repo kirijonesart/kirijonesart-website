@@ -22,4 +22,6 @@ Have a question about classes, workshops, or private lessons? Send a message bel
   <button type="submit">Send</button>
 </form>
 
-<p>You can also reach out via Instagram: <a href="https://instagram.com/yourhandle" target="_blank" rel="noopener">@yourhandle</a></p>
+
+
+
