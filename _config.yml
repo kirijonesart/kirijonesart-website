@@ -1,7 +1,7 @@
 title: "Kiri Jones ART"
 description: "Community art classes and creative exploration"
 url: "" # set to your GitHub Pages URL later
-baseurl: "/kirijonesart-website" # e.g. /repo-name if publishing from project site
+baseurl: "/" # e.g. /repo-name if publishing from project site
 
 # Build settings
 theme: minima
